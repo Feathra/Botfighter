@@ -4,7 +4,7 @@ At that point it was only possible to control the game by yourself .
 
 Then we talk about improvements we want to do and exercises we need to do and who will do them:
 
-* FastAPI server: Liza  - Creating the file that exposes various endpoints to real-time interact with the game state. File uses FastAPI for handling HTTP requests and Pydantic for data validation. It also integrates a Dummy_Agent that makes decisions based on the current game state.
+* FastAPI server: Liza  - Creating the file that exposes various endpoints to real-time interact with the game state (with FastAPI and Pydantic). It also integrates a Dummy_Agent.
 * Dummy_Agend: Meret - The red laser was introduced to simulate the dummy agent's vision. If an enemy crosses it, it is detected and shot down. 
 * MiniMap: Liza  - This file's code creates a 2D game map visualizer using the Pygame library. The map depends on a server running on localhost:8000 that exposes the necessary endpoints /walls and /game_state. Also, minimap could be assesed through the HTML-based minimap interface /minimap.
 * Improve enemies, bullets, engine: Meret - Enemies should not be able to see and shoot through walls, Growing number of enemies, world visualizer, game over, menu with game mode selection, score board
