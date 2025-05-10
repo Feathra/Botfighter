@@ -223,7 +223,7 @@ The basic mechanics are:
 
 # <div align="center"> Appendix: File Descriptions</div>
 
-* **`engine_2.py`**:
+* **`engine.py`**:
     * Core game engine with improved enemy movement logic
     * Defines the `SpaceObject`, `Bullet`, `Coin`, and `GameEngine` classes
     * Implements state-machine based enemy patrol behavior with three states:
@@ -234,7 +234,7 @@ The basic mechanics are:
     * Handles dynamic coin generation and collection mechanics
     * Provides purple coloring for the player ship
 
-* **`dummy_agent_2.py`**:
+* **`dummy_agent.py`**:
     * Sophisticated AI agent that uses sensor data to navigate
     * Features enhanced stuck detection and escape mechanisms
     * Implements memory of recent targets for consistent goal-seeking
@@ -243,7 +243,7 @@ The basic mechanics are:
     * Provides combat strategies including circling and evasive maneuvers
     * Falls back to random exploration when no targets are detected
 
-* **`server_2.py`**:
+* **`server.py`**:
     * FastAPI server with English-language wall data comments
     * Implements automatic port selection (8080, 8000, 8888, 9000)
     * Provides sensor simulation endpoints:
@@ -254,7 +254,7 @@ The basic mechanics are:
     * Maintains game state synchronization between engine and clients
     * Provides status endpoint for server detection
 
-* **`minimap_2.py`**:
+* **`minimap.py`**:
     * Visualization tool showing the entire game arena
     * Dynamically detects and connects to available server
     * Shows player ship in purple, enemy ships in blue
@@ -270,60 +270,6 @@ The basic mechanics are:
     * To use: open in a browser while the server is running
 
 <br><br>
-
-# Botfighter
-Liza and Meret's Version of the Scientific Python for Engineering Project
-
-## Included documents:
-
-* **`Instruction + Demo Launch.md`**:
-    * Instructions on how to install and launch a demo version
-
-* **`engine.py`**:
-    * This file contains the core game logic using Pygame.
-    * It defines the `SpaceObject` (ships), `Bullet`, `Coin`, and `GameEngine` classes.
-    * Handles ship movement, physics, collisions, bullet mechanics, and the main game loop.
-    * Implements a sophisticated labyrinth with wall collision detection.
-    * Features intelligent enemy movement with state machine-based patrol patterns.
-    * Includes coin generation and collection mechanics with score tracking.
-    * Supports both player-controlled and agent-controlled gameplay modes.
-    * Communicates with the server to synchronize game state.
-
-* **`dummy_agent.py`**:
-    * An enhanced AI agent that controls a ship using sensor-based decision making.
-    * Features sophisticated stuck detection and escape mechanisms.
-    * Implements target memory to track objects even when they're temporarily out of view.
-    * Contains intelligent wall avoidance with progressive turning based on proximity.
-    * Uses a prioritized decision system (enemies → coins → exploration).
-    * Includes combat strategies such as circling and evasive maneuvers.
-    * Adapts its behavior based on the situation (gentle turns for coins, aggressive for combat).
-
-* **`server.py`**:
-    * A FastAPI server that handles game state synchronization and agent decision making.
-    * Defines robust API endpoints for:
-        * `/game_state`: Returns the current state of the game (ships, bullets, coins, scores).
-        * `/walls`: Provides the labyrinth wall data.
-        * `/decide/`: Processes game state and returns agent decisions.
-        * `/sense`: Simulates sensors (laser, radar) for realistic agent perception.
-        * `/status`: Simple endpoint to check if server is running.
-    * Implements port fallback to find an available port automatically.
-    * Handles CORS for browser compatibility.
-    * Simulates physical sensors like lasers and radar for more realistic AI.
-
-* **`minimap.py`**:
-    * Provides a real-time visualization of the entire game world.
-    * Automatically detects and connects to the game server.
-    * Displays ships (player in purple, enemies in blue), bullets, walls, and coins.
-    * Shows score information and debug data.
-    * Features automatic server detection across multiple ports.
-    * Implements retry logic for connection resilience.
-    * Includes a debug display with entity counts and server information.
-    * Can be refreshed with the 'R' key.
-
-* **`server_demo.html`**:
-    * Provides a basic web interface for interacting with or observing the game server.
-    * Establishes a connection with the server and displays real-time information.
-    * To use this interface, open the file in a web browser while the server is running.
 
 
 
