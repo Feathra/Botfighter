@@ -10,7 +10,7 @@ from dummy_agent import DummyAgent
 
 # Set world size and screen dimensions
 WORLD_WIDTH, WORLD_HEIGHT = 2000, 2000
-SCREEN_WIDTH, SCREEN_HEIGHT = 800, 600
+SCREEN_WIDTH, SCREEN_HEIGHT = 1400, 1000
 
 # Define colors
 WHITE = (255, 255, 255)
@@ -757,8 +757,8 @@ def main():
             camera_y = player.y
 
             # Clear screen and draw background
-            screen.fill(WHITE)
-            screen.blit(transparent_surface, (-camera_x + SCREEN_WIDTH // 2, -camera_y + SCREEN_HEIGHT // 2))
+            screen.blit(background_image, (0, 0))
+            # screen.blit(transparent_surface, (-camera_x + SCREEN_WIDTH // 2, -camera_y + SCREEN_HEIGHT // 2))
 
             # Draw walls
             for wall in walls:
