@@ -192,9 +192,9 @@ The FastAPI server provides several endpoints to interact with the game:
 
 - http://localhost:8000 Displays a welcome message.
 
-- http://localhost:8000/walls Returns the layout of walls in the game. Ships: The position, angle, and status of each ship. Bullets: The position and trajectory of projectiles fired by ships. Coins: The location of collectible items. Walls: The location and dimensions of walls in the environment.
+- http://localhost:8000/walls Returns the layout of walls in the game: its location and dimensions in the environment.
 
-- http://localhost:8000/game_state Retrieves the current game state. 
+- http://localhost:8000/game_state Retrieves the current game state. Ships: The position, angle, and status of each ship. Bullets: The position and trajectory of projectiles fired by ships. Coins: The location of collectible items. 
 
 - http://localhost:8000/minimap Displays a minimap of the game environment via an HTML interface.
 
